@@ -27,16 +27,8 @@
             <div class="form-group">
                 <label for="description" class="form-control-label">Deskripsi Barang</label>
                 <textarea name="description"
-                    class="form-control @error('description') is-invalid @enderror">{{ old('description') }}</textarea>
+                    class="ckeditor form-control @error('description') is-invalid @enderror">{{ old('description') }}</textarea>
                 @error('description')
-                <div class="text-muted">{{ $message }}</div>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label for="type" class="form-control-label">Tipe Barang</label>
-                <input type="text" name="type" value="{{ old('type') }}"
-                    class="form-control @error('type') is-invalid @enderror" />
-                @error('type')
                 <div class="text-muted">{{ $message }}</div>
                 @enderror
             </div>

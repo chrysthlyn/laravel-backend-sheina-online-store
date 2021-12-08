@@ -40,7 +40,7 @@ class ProductGalleryController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::all();
     }
 
     /**

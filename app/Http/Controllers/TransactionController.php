@@ -26,7 +26,11 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        //
+        $items = Transaction::all();
+
+        return view('pages.transactions.index')->with([
+            'items' => $items
+        ]);
     }
 
     /**

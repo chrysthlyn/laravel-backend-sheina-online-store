@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transaction;
+use App\Models\TransactionDetail;
+
 use Illuminate\Http\Request;
 
 class TransactionController extends Controller

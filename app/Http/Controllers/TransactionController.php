@@ -77,7 +77,11 @@ class TransactionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Transaction::findOrFail($id);
+
+        return view('pages.transactions.edit')->with([
+            'item' => $item
+        ]);
     }
 
     /**

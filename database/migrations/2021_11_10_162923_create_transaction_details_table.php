@@ -17,6 +17,7 @@ class CreateTransactionDetailsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('transactions_id');
             $table->integer('products_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

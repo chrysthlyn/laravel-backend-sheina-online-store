@@ -1,5 +1,5 @@
 <!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
@@ -286,8 +286,8 @@
 </script>
 
 <script>
-    jQuery(document).ready(function ($) {
-        $('#mymodal').on('show.bs.modal', function (e) {
+    jQuery(document).ready(function($){
+        $('#mymodal').on('show.bs.modal', function(e){
             var button = $(e.relatedTarget);
             var modal = $(this);
 
@@ -298,7 +298,7 @@
 
 </script>
 
-<div class="modal" id="mymodal" tabindex="-1" role="dialog">
+<div class="modal fade" id="mymodal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">

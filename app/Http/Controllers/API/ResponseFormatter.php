@@ -18,7 +18,7 @@ class ResponseFormatter
         self::$response['meta']['message'] = $message;
         self::$response['data'] = $data;
 
-        return response()->json(self::$response, self::$response['meta']['data']);
+        return response()->json(self::$response, self::$response['meta']['code']);
     }
 
     public static function error($data = null, $message = null, $code = 400)
@@ -28,6 +28,6 @@ class ResponseFormatter
         self::$response['meta']['message'] = $message;
         self::$response['data'] = $data;
 
-        return response()->json(self::$response, self::$response['meta']['data']);
+        return response()->json(self::$response, self::$response['meta']['code']);
     }
 }

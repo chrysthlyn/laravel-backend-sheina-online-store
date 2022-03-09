@@ -17,5 +17,15 @@ class ProductController extends Controller
         $type = $request->input('type');
         $price_from = $request->input('price_from');
         $price_to = $request->input('price_to');
+
+        if($id)
+        {
+            $product = Product::with('galleries')->find($id);
+
+            if($product)
+                return ResponseFormatter::success($product, 'Data produk berhasil diambil');
+            else
+                return ResponseFormatter::error(null, 'Data produk tidak tersedia', 404);
+        }
     }
 }

@@ -51,12 +51,12 @@
         </a>
     </div>
     <div class="col-4">
-        <a href="{{ route('transactions.status', $item->id) }}?status=PENDING" class="btn btn-info btn-block">
+        <a href="{{ route('transactions.status', $item->id) }}?status=PENDING" class="btn btn-warning btn-block">
             <i class="fa fa-spinner"></i>Set Pending
         </a>
     </div>
     <div class="col-4">
-        <a href="{{ route('transactions.status', $item->id) }}?status=FAILED" class="btn btn-warning btn-block">
+        <a href="{{ route('transactions.status', $item->id) }}?status=FAILED" class="btn btn-danger btn-block">
             <i class="fa fa-times"></i>Set Failed
         </a>
     </div>

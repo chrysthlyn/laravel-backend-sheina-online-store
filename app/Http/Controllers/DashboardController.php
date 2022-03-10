@@ -20,7 +20,7 @@ class DashboardController extends Controller
     public function index()
     {
         $income =  Transaction::where('transaction_status', 'SUCCESS')->sum('transaction_total');
-        $sales = Transaction::count();
+        $sales = Transaction::where('transaction_status', 'SUCCESS')->count();
         $items = Transaction::orderBy('id', 'DESC')->take(5)->get();
         $pie = [
             'pending' => Transaction::where('transaction_status', 'PENDING')->count(),

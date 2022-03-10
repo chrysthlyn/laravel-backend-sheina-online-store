@@ -27,5 +27,15 @@ class ProductController extends Controller
             else
                 return ResponseFormatter::error(null, 'Data produk tidak tersedia', 404);
         }
+
+        if($slug)
+        {
+            $product = Product::with('galleries')->where('slug', $slug)->first();
+
+            if($product)
+                return ResponseFormatter::success($product, 'Data produk berhasil diambil');
+            else
+                return ResponseFormatter::error(null, 'Data produk tidak tersedia', 404);
+        }
     }
 }
